@@ -25,6 +25,12 @@
             <artifactId>gpt3-tokenizer</artifactId>
             <version>0.1.4</version>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.9.1</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 </project>
