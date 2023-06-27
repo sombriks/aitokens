@@ -22,4 +22,16 @@ public class CountAndAskTest {
         Assertions.assertNotNull(result);
         Assertions.assertEquals(tokens.size(), result.getUsage().getPromptTokens());
     }
+
+    @Test
+    public void throwsErrorDueToCountTokens () {
+
+        String hello = "Hello there!";
+
+        GPT3Tokenizer tokenizer = new GPT3Tokenizer(Encoding.forModel(OPENAI_MODEL));
+        var tokens = tokenizer.encode(hello);
+
+        var result = service.ask(hello, tokens.size());
+        Assertions.assertNotNull(result);
+    }
 }
